@@ -83,5 +83,5 @@ const data = {
       description: 'high quality product',
     },
   ],
-};
+}
 export default data;
