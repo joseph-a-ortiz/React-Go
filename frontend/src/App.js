@@ -162,7 +162,16 @@ function App() {
             ) : errorCategories ? (
               <MessageBox variant="danger">{errorCategories}</MessageBox>
             ) : (
-              categories.map((c) => (
+              <ul>
+              <li>
+                <Link
+                 
+                  to={`/search/category/all`}
+                >
+                  All
+                </Link>
+              </li>
+              {categories.map((c) => (
                 <li key={c}>
                   <Link
                     to={`/search/category/${c}`}
@@ -171,7 +180,8 @@ function App() {
                     {c}
                   </Link>
                 </li>
-              ))
+              ))}
+              </ul>
             )}
           </ul>
         </aside>
