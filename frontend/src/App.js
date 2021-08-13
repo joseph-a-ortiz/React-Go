@@ -75,7 +75,7 @@ function App() {
               )}
             ></Route>
           </div>
-          <div>
+          <div className="Header-options">
             <Link to="/cart">
               Cart
               {cartItems.length > 0 && (
@@ -165,8 +165,8 @@ function App() {
               <ul>
               <li>
                 <Link
-                 
                   to={`/search/category/all`}
+                  onClick={() => setSidebarIsOpen(false)}
                 >
                   All
                 </Link>

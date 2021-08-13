@@ -111,6 +111,10 @@ a.brand {
   font-size: 1.4rem;
   margin-left: 0.2rem;
 }
+.Header-options {
+  background-color: #5761bb;
+  padding: 1.6rem;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -196,8 +200,8 @@ img.large {
 
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  
+  background-color: #fff;
   border-radius: 0.5rem;
   margin: 1rem;
 }
