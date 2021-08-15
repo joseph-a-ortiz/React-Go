@@ -65,7 +65,7 @@ function App() {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
-              Hwdy Chicken
+            Howdy
             </Link>
           </div>
           <div>
@@ -77,7 +77,7 @@ function App() {
           </div>
           <div className="Header-options">
             <Link to="/cart">
-              Cart
+            <i className="fa fa-shopping-cart"></i>
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
@@ -102,7 +102,7 @@ function App() {
                 </ul>
               </div>
             ) : (
-              <Link to="/signin">Sign In</Link>
+              <Link to="/signin"><i className="fa fa-user"></i></Link>
             )}
             {userInfo && userInfo.isSeller && (
               <div className="dropdown">

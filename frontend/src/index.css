@@ -113,7 +113,7 @@ a.brand {
 }
 .Header-options {
   background-color: #5761bb;
-  padding: 1.6rem;
+  padding: 1rem;
 }
 .row {
   display: flex;
@@ -330,6 +330,12 @@ img.large {
 .active {
   font-weight: bold;
 }
+@media screen and (min-width: 0px) and (max-width: 750px){
+  .search {
+    display: none;
+  }
+}
+
 
 /* Map */
 .full-container {
