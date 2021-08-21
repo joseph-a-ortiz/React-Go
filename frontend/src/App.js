@@ -27,7 +27,6 @@ import SearchScreen from './screens/SearchScreen';
 import { listProductCategories } from './actions/productActions';
 import LoadingBox from './components/LoadingBox';
 import MessageBox from './components/MessageBox';
-import MapScreen from './screens/MapScreen';
 import DashboardScreen from './screens/DashboardScreen';
 import SupportScreen from './screens/SupportScreen';
 import ChatBox from './components/ChatBox';
@@ -75,7 +74,7 @@ function App() {
               )}
             ></Route>
           </div>
-          <div className="Header-options">
+          <div className="Header-options" >
             <Link to="/cart">
             <i className="fa fa-shopping-cart"></i>
               {cartItems.length > 0 && (
@@ -225,7 +224,6 @@ function App() {
             path="/profile"
             component={ProfileScreen}
           ></PrivateRoute>
-          <PrivateRoute path="/map" component={MapScreen}></PrivateRoute>
           <AdminRoute
             path="/productlist"
             component={ProductListScreen}

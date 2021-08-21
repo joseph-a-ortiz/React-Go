@@ -79,13 +79,14 @@ img.medium {
 
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  border: 1rem #491d1d solid;
+  background-color: #130909;
   border-radius: 0.5rem;
-  margin: 1rem;
+  margin: 10rem;
 }
 .card-body {
   padding: 1rem;
+  border: 1rem #491d1d solid;
 }
 .card-body > * {
   margin-bottom: 0.5rem;
