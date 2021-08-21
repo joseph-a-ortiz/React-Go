@@ -13,8 +13,6 @@ export default function HomeScreen() {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
-  const productDetails = useSelector((state) => state.productDetails);
-  const { product } = productDetails;
 
   const userTopSellersList = useSelector((state) => state.userTopSellersList);
   const {
@@ -29,30 +27,24 @@ export default function HomeScreen() {
   }, [dispatch]);
   return (
     <div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-      {loading ? (
+      <h2>Top Sellers</h2>
+      {loadingSellers ? (
         <LoadingBox></LoadingBox>
-      ) : error ? (
-        <MessageBox variant="danger">{error}</MessageBox>
+      ) : errorSellers ? (
+        <MessageBox variant="danger">{errorSellers}</MessageBox>
       ) : (
         <>
-        <Carousel showArrows autoPlay showThumbs={true}>
-        {products.map((product) => (
-          <Link to={`/product/${product._id}`}>
-            <div key={product._id}>
-              <img src={product.image} />
-                <br></br>
-                <br></br>
-                <br></br>
-              <p className="legend">{product.name}</p>
-             </div>
-          </Link>
+          {sellers.length === 0 && <MessageBox>No Seller Found</MessageBox>}
+          <Carousel showArrows autoPlay showThumbs={false}>
+            {sellers.map((seller) => (
+              <div key={seller._id}>
+                <Link to={`/seller/${seller._id}`}>
+                  <img src={seller.seller.logo} alt={seller.seller.name} />
+                  <p className="legend">{seller.seller.name}</p>
+                </Link>
+              </div>
             ))}
-        </Carousel>
+          </Carousel>
         </>
       )}
       <h2>Featured Products</h2>

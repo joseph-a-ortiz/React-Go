@@ -27,6 +27,7 @@ import SearchScreen from './screens/SearchScreen';
 import { listProductCategories } from './actions/productActions';
 import LoadingBox from './components/LoadingBox';
 import MessageBox from './components/MessageBox';
+import MapScreen from './screens/MapScreen';
 import DashboardScreen from './screens/DashboardScreen';
 import SupportScreen from './screens/SupportScreen';
 import ChatBox from './components/ChatBox';
@@ -64,7 +65,7 @@ function App() {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
-            Howdy
+              amazona
             </Link>
           </div>
           <div>
@@ -74,9 +75,9 @@ function App() {
               )}
             ></Route>
           </div>
-          <div className="Header-options" >
+          <div>
             <Link to="/cart">
-            <i className="fa fa-shopping-cart"></i>
+              Cart
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
@@ -101,7 +102,7 @@ function App() {
                 </ul>
               </div>
             ) : (
-              <Link to="/signin"><i className="fa fa-user"></i></Link>
+              <Link to="/signin">Sign In</Link>
             )}
             {userInfo && userInfo.isSeller && (
               <div className="dropdown">
@@ -161,16 +162,7 @@ function App() {
             ) : errorCategories ? (
               <MessageBox variant="danger">{errorCategories}</MessageBox>
             ) : (
-              <ul>
-              <li>
-                <Link
-                  to={`/search/category/all`}
-                  onClick={() => setSidebarIsOpen(false)}
-                >
-                  All
-                </Link>
-              </li>
-              {categories.map((c) => (
+              categories.map((c) => (
                 <li key={c}>
                   <Link
                     to={`/search/category/${c}`}
@@ -179,8 +171,7 @@ function App() {
                     {c}
                   </Link>
                 </li>
-              ))}
-              </ul>
+              ))
             )}
           </ul>
         </aside>
@@ -224,6 +215,7 @@ function App() {
             path="/profile"
             component={ProfileScreen}
           ></PrivateRoute>
+          <PrivateRoute path="/map" component={MapScreen}></PrivateRoute>
           <AdminRoute
             path="/productlist"
             component={ProductListScreen}

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveShippingAddress } from '../actions/cartActions';
@@ -12,6 +11,8 @@ export default function ShippingAddressScreen(props) {
   const { shippingAddress } = cart;
   const [lat, setLat] = useState(shippingAddress.lat);
   const [lng, setLng] = useState(shippingAddress.lng);
+  const userAddressMap = useSelector((state) => state.userAddressMap);
+  const { address: addressMap } = userAddressMap;
 
   if (!userInfo) {
     props.history.push('/signin');
@@ -24,9 +25,18 @@ export default function ShippingAddressScreen(props) {
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
-
+    const newLat = addressMap ? addressMap.lat : lat;
+    const newLng = addressMap ? addressMap.lng : lng;
+    if (addressMap) {
+      setLat(addressMap.lat);
+      setLng(addressMap.lng);
+    }
     let moveOn = true;
-
+    if (!newLat || !newLng) {
+      moveOn = window.confirm(
+        'You did not set your location on map. Continue?'
+      );
+    }
     if (moveOn) {
       dispatch(
         saveShippingAddress({
@@ -35,6 +45,8 @@ export default function ShippingAddressScreen(props) {
           city,
           postalCode,
           country,
+          lat: newLat,
+          lng: newLng,
         })
       );
       props.history.push('/payment');
@@ -115,6 +127,12 @@ export default function ShippingAddressScreen(props) {
             onChange={(e) => setCountry(e.target.value)}
             required
           ></input>
+        </div>
+        <div>
+          <label htmlFor="chooseOnMap">Location</label>
+          <button type="button" onClick={chooseOnMap}>
+            Choose On Map
+          </button>
         </div>
         <div>
           <label />
