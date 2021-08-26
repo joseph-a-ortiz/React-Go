@@ -15,7 +15,6 @@ export default function ChatBox(props) {
   const [messages, setMessages] = useState([
     { name: 'Admin', body: 'Hello there, Please ask your question.' },
   ]);
-
   useEffect(() => {
     if (uiMessagesRef.current) {
       uiMessagesRef.current.scrollBy({
