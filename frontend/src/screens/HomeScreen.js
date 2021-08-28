@@ -40,7 +40,7 @@ export default function HomeScreen() {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <>
-        <Carousel showArrows autoPlay showThumbs={true}>
+        <Carousel showArrows autoPlay showThumbs={false}>
         {products.map((product) => (
           <Link to={`/product/${product._id}`}>
             <div key={product._id}>

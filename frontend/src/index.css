@@ -217,18 +217,24 @@ img.large {
 
 /* Card */
 .card {
-  margin: 5rem 3rem;
-  color: white;
-  box-sizing: border-box;
+  margin: 1rem 0rem;
   background-color: rgb(0, 0, 0);
   border-radius: 0.5rem;
   border: .3rem #b4fb42 solid;
   box-shadow:
   0 0 .8vw #fbef42;
-  justify-content: center;
-  padding: 10rem 18rem;
+    text-align: left;
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    -webkit-transition: background-color .2s ease-in-out;
+    -o-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
 }
-@media screen and (min-width: 0px) and (max-width: 750px){
+/*@media screen and (min-width: 0px) and (max-width: 750px){
   .card{
   padding: 2rem 5rem
   }
@@ -237,13 +243,15 @@ img.large {
   .card{
     padding: 1rem 2rem
   }
-}
+}*/
 
 
 .card-body {
-  padding: 1rem;
   box-sizing: border-box;
   color: white;
+  padding-left: 8rem;
+  padding-bottom: 5rem;
+  
 }
 .card-body > * {
   margin-bottom: 0.5rem;

@@ -7,7 +7,7 @@ export default function Product(props) {
   return (
     <div key={product._id} className="card">
       <Link to={`/product/${product._id}`}>
-        <img className="medium" src={product.image} alt={product.name} />
+        <img className="large" src={product.image} alt={product.name} />
       </Link>
       <div className="card-body">
         <Link to={`/product/${product._id}`}>
@@ -19,10 +19,7 @@ export default function Product(props) {
         ></Rating>
         <div className="row">
           <div className="price">${product.price}</div>
-          <div>
-            <Link to={`/seller/${product.seller._id}`}>
-            </Link>
-          </div>
+      
         </div>
       </div>
     </div>
