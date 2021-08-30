@@ -76,7 +76,7 @@ function App() {
           </div>
           <div className="Header-options" >
             <Link to="/cart">
-            <i className="fa fa-shopping-cart"></i>
+            <i className="fa fa-shopping-cart fa-lg"></i>
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
