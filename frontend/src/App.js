@@ -101,7 +101,7 @@ function App() {
                 </ul>
               </div>
             ) : (
-              <Link to="/signin"><i className="fa fa-user"></i></Link>
+              <Link to="/signin"><i className="fa fa-user fa-lg"></i></Link>
             )}
             {userInfo && userInfo.isSeller && (
               <div className="dropdown">
