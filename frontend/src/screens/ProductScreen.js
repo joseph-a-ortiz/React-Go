@@ -202,7 +202,7 @@ export default function ProductScreen(props) {
                   </form>
                 ) : (
                   <MessageBox>
-                    Please <Link to="/signin">Sign In</Link> to write a review
+                    Please <Link className="linkto" to="/signin" >Sign In</Link> to write a review
                   </MessageBox>
                 )}
               </li>

@@ -16,7 +16,7 @@ body {
 
 * {
   background-color: #000000;
-  color: white;
+
 }
 
 /* Layout */
@@ -58,7 +58,8 @@ a {
   color: white;
 }
 a:hover {
-  color: #ff8000;
+  color: #b4fb42;
+  text-shadow: 1px 0px 10px #fbef42;
 }
 ul {
   padding: 0;
@@ -100,6 +101,16 @@ button.primary {
 }
 button.block {
   width: 100%;
+  color: #6e6e6e;
+  border-color: #5f5f5f;
+  border-width: .2rem;
+  border-radius: .1rem;
+}
+button.block:hover{
+  color: #b4fb42;
+  border: .3rem #b4fb42 solid;
+  box-shadow:
+  0 0 .8vw #fbef42;
 }
 button.small {
   font-size: 1.2rem;
@@ -132,6 +143,7 @@ a.brand {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  color: white;
 }
 .row.center {
   justify-content: center;
@@ -177,9 +189,12 @@ button.open-sidebar {
   background: none;
   color: #ffffff;
   cursor: pointer;
+  border-color: #000000;
 }
 button.open-sidebar:hover {
-  border-color: #000000;
+  border: .1rem #b4fb42 solid;
+  box-shadow:
+  0 0 .8vw #fbef42;
 }
 aside ul {
   padding: 0;
@@ -437,16 +452,20 @@ img.large {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
+  display: none;
 }
 .chatbox ul {
   overflow: scroll;
   max-height: 20rem;
+  display: none;
 }
 .chatbox li {
   margin-bottom: 1rem;
+  display: none;
 }
 .chatbox input {
   width: calc(100% - 9rem);
+  display: none;
 }
 
 .support-users {
@@ -512,4 +531,22 @@ img.large {
 }
 .fa-close {
   color: #ffffff;
+}
+.fa-user:hover {
+  color: #b4fb42;
+  text-shadow: 1px 0px 10px #fbef42;
+}
+.fa-shopping-cart:hover{
+  color: #b4fb42;
+  text-shadow: 1px 0px 10px #fbef42;
+}
+
+.linkto {
+  color: rgb(48, 48, 48);
+  background-color: #e0e0ff;
+}
+
+.linkto:hover {
+  color: #dd8500;
+  background-color: #e0e0ff;
 }

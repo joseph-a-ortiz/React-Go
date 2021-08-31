@@ -52,6 +52,7 @@ export default function CartScreen(props) {
                   </div>
                   <div>
                     <select
+                    className="row"
                       value={item.qty}
                       onChange={(e) =>
                         dispatch(
