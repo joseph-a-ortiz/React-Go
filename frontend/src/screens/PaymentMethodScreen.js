@@ -17,7 +17,7 @@ export default function PaymentMethodScreen(props) {
     props.history.push('/placeorder');
   };
   return (
-    <div>
+    <div  className="white">
       <CheckoutSteps step1 step2 step3></CheckoutSteps>
       <form className="form" onSubmit={submitHandler}>
         <div>
@@ -52,7 +52,7 @@ export default function PaymentMethodScreen(props) {
         </div>
         <div>
           <label />
-          <button className="primary" type="submit">
+          <button className="primary white" type="submit">
             Continue
           </button>
         </div>

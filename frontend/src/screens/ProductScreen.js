@@ -114,6 +114,7 @@ export default function ProductScreen(props) {
                           <div>Qty</div>
                           <div>
                             <select
+                              className="white"
                               value={qty}
                               onChange={(e) => setQty(e.target.value)}
                             >
@@ -142,7 +143,7 @@ export default function ProductScreen(props) {
               </div>
             </div>
           </div>
-          <div>
+          <div className="white">
             <h2 id="reviews">Reviews</h2>
             {product.reviews.length === 0 && (
               <MessageBox>There is no review</MessageBox>
@@ -162,9 +163,10 @@ export default function ProductScreen(props) {
                     <div>
                       <h2>Write a customer review</h2>
                     </div>
-                    <div>
+                    <div >
                       <label htmlFor="rating">Rating</label>
                       <select
+                        className="white"
                         id="rating"
                         value={rating}
                         onChange={(e) => setRating(e.target.value)}
@@ -180,6 +182,7 @@ export default function ProductScreen(props) {
                     <div>
                       <label htmlFor="comment">Comment</label>
                       <textarea
+                      className="white"
                         id="comment"
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
@@ -187,7 +190,7 @@ export default function ProductScreen(props) {
                     </div>
                     <div>
                       <label />
-                      <button className="primary" type="submit">
+                      <button className="primary white" type="submit">
                         Submit
                       </button>
                     </div>

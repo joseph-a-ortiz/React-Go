@@ -58,7 +58,7 @@ a {
   color: white;
 }
 a:hover {
-  color: #b4fb42;
+  color: #d7ff46;
   text-shadow: 1px 0px 10px #fbef42;
 }
 ul {
@@ -532,14 +532,6 @@ img.large {
 .fa-close {
   color: #ffffff;
 }
-.fa-user:hover {
-  color: #b4fb42;
-  text-shadow: 1px 0px 10px #fbef42;
-}
-.fa-shopping-cart:hover{
-  color: #b4fb42;
-  text-shadow: 1px 0px 10px #fbef42;
-}
 
 .linkto {
   color: rgb(48, 48, 48);
@@ -549,4 +541,8 @@ img.large {
 .linkto:hover {
   color: #dd8500;
   background-color: #e0e0ff;
+}
+
+.white{
+  color: white;
 }
