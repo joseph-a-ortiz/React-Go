@@ -114,13 +114,13 @@ export default function ProductScreen(props) {
                           <div>Qty</div>
                           <div>
                             <select
-                              className="white"
+                              className="row"
                               value={qty}
                               onChange={(e) => setQty(e.target.value)}
                             >
                               {[...Array(product.countInStock).keys()].map(
                                 (x) => (
-                                  <option key={x + 1} value={x + 1}>
+                                  <option key={x + 1} value={x + 1} >
                                     {x + 1}
                                   </option>
                                 )
@@ -166,7 +166,7 @@ export default function ProductScreen(props) {
                     <div >
                       <label htmlFor="rating">Rating</label>
                       <select
-                        className="white"
+                        className="row"
                         id="rating"
                         value={rating}
                         onChange={(e) => setRating(e.target.value)}
@@ -182,7 +182,7 @@ export default function ProductScreen(props) {
                     <div>
                       <label htmlFor="comment">Comment</label>
                       <textarea
-                      className="white"
+                      className="row"
                         id="comment"
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}

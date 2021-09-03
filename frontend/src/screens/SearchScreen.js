@@ -65,6 +65,7 @@ export default function SearchScreen(props) {
         <div>
           Sort by{' '}
           <select
+          className="white"
             value={order}
             onChange={(e) => {
               props.history.push(getFilterUrl({ order: e.target.value }));

@@ -64,6 +64,7 @@ export default function ShippingAddressScreen(props) {
         <div>
           <label htmlFor="fullName">Full Name</label>
           <input
+          className="white"
             type="text"
             id="fullName"
             placeholder="Enter full name"
@@ -75,6 +76,7 @@ export default function ShippingAddressScreen(props) {
         <div>
           <label htmlFor="address">Address</label>
           <input
+            className="white"
             type="text"
             id="address"
             placeholder="Enter address"
@@ -86,6 +88,7 @@ export default function ShippingAddressScreen(props) {
         <div>
           <label htmlFor="city">City</label>
           <input
+            className="white"
             type="text"
             id="city"
             placeholder="Enter city"
@@ -97,6 +100,7 @@ export default function ShippingAddressScreen(props) {
         <div>
           <label htmlFor="postalCode">Postal Code</label>
           <input
+            className="white"
             type="text"
             id="postalCode"
             placeholder="Enter postal code"
@@ -108,6 +112,7 @@ export default function ShippingAddressScreen(props) {
         <div>
           <label htmlFor="country">Country</label>
           <input
+            className="white"
             type="text"
             id="country"
             placeholder="Enter country"
