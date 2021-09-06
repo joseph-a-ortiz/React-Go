@@ -37,6 +37,7 @@ export default function SigninScreen(props) {
         <div>
           <label htmlFor="email">Email address</label>
           <input
+                  className="white"
             type="email"
             id="email"
             placeholder="Enter email"
@@ -47,6 +48,7 @@ export default function SigninScreen(props) {
         <div>
           <label htmlFor="password">Password</label>
           <input
+                  className="white"
             type="password"
             id="password"
             placeholder="Enter password"
